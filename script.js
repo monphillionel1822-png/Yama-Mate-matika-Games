@@ -1,12 +1,12 @@
 let num1, num2, operator, correctAnswer;
 let score = 0;
-let timeLeft = 50;
+let timeLeft = 60;
 let timer;
 let gameActive = false;
 
 function generateQuestion() {
-  num1 = Math.floor(Math.random() * 10) + 1;
-  num2 = Math.floor(Math.random() * 10) + 1;
+  num1 = Math.floor(Math.random() * 20) + 1;
+  num2 = Math.floor(Math.random() * 20) + 1;
   const operators = ["+", "-", "*"];
   operator = operators[Math.floor(Math.random() * operators.length)];
 
@@ -43,7 +43,7 @@ function checkAnswer() {
 
 function startGame() {
   score = 0;
-  timeLeft = 50;
+  timeLeft = 60;
   gameActive = true;
 
   document.getElementById("score").innerText = "Skor: " + score;
@@ -80,3 +80,4 @@ function endGame() {
 function restartGame() {
   startGame();
 }
+
